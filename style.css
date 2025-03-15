@@ -1,0 +1,102 @@
+*{
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F0EFEC; /* Define o fundo apenas para o body */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+
+/* Container principal */
+.viewportContainer {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 6fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/* Container cabeçalho */
+.headerContainer {
+    grid-area: header;
+    background-color: #DAD7CD;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 10px;
+    grid-template-areas:
+        "logo icons"
+        "tabs tabs";
+        
+}
+
+/* Logo */
+.logoContainer {
+    grid-area: logo;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1vh;
+    
+    
+
+
+}
+.logoContainer b {
+    color: #3A5A40;
+    font-family: "Merriweather", sans-serif;
+    font-size: 4vh;
+    font-weight: 800
+    ;
+
+}
+.logoContainer img {
+    height: 6vh;
+
+    
+}
+
+/* Navegação entre abas*/
+.tabsNav {
+    grid-area: tabs;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    padding: 1vh;
+    margin-bottom: 1.5vh;
+ 
+}
+
+.tabsNav b a {
+    text-decoration: none;
+    color: #DAD7CD;
+    font-family: "Merriweather", sans-serif;
+    background-color: #3A5A40;
+    padding: 0.4vh;
+    border-radius: 5px;
+}
+
+/* Navegação dos icones */
+.profileNav {
+    grid-area: icons;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.icons {
+    height: 3vh;
+    margin: 1.5vh;
+}
+
+
+
