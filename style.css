@@ -98,5 +98,34 @@ body {
     margin: 1.5vh;
 }
 
+.sobreContainer {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+.sobreContent {
+    max-width: 800px;
+    font-family: 'Josefin Slab', serif;
+    color: #333;
+    line-height: 1.8;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.sobreContent h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #2e7d32; /* Verde mais ecológico */
+    text-align: center;
+}
+
+.sobreContent p {
+    font-size: 1.1em;
+    margin-bottom: 16px;
+}
 
 
