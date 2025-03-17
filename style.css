@@ -3,8 +3,11 @@
     margin: 0; 
     box-sizing: border-box;
 }
-body {
-    background-color: #F0EFEC; /* Define o fundo apenas para o body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #F0EFEC;
 }
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
@@ -116,7 +119,7 @@ body {
 .viewportContainer {
     display: grid;
     height: 100vh;
-    grid-template-rows: 1fr 7fr 3fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header"
         "main"
@@ -124,7 +127,9 @@ body {
 }
 /* ------------------------------------------------------------------ */
 
-
+#carousel1{
+    max-width: 100vw;
+}
 /* Container cabeçalho */
 /* ------------------------------------------------------------------ */
 .headerContainer {
@@ -132,10 +137,19 @@ body {
     background-color: #DAD7CD;
     
     display: grid;
-    grid-template-columns: repeat(2 1fr);
+    grid-template-columns: repeat(3 1fr);
     grid-template-areas:
-        "logo icons"
-        "tabs tabs";
+        "logo tabs icons";
+        
+}
+.footerContainer {
+    grid-area: footer;
+    background-color: #DAD7CD;
+    
+    display: grid;
+    grid-template-rows: repeat(3 1fr);
+    grid-template-areas:
+        "logo tabs icons";
         
 }
 /* Logo */
@@ -192,6 +206,7 @@ body {
 /* Container Main */
 /* ------------------------------------------------------------------ */
 .mainContainer {
+    grid-area: main;
     margin: 2vw;
     justify-items: center;
     
@@ -340,6 +355,17 @@ body {
             
     }
 
+    .footerContainer {
+        grid-area: footer;
+        background-color: #DAD7CD;
+        height: auto;
+        display: grid;
+        grid-template-rows: repeat(3 1fr);
+        grid-template-areas:
+            "logo tabs icons";
+            
+    }
+
     /* Logo */
     /* ------------------------------------------------------------------ */
     .logoContainer {
@@ -403,6 +429,16 @@ body {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas:
         "logo tabs tabs icons";
+            
+    }
+    .footerContainer {
+        grid-area: footer;
+        background-color: #DAD7CD;
+        height: auto;
+        display: grid;
+        grid-template-rows: repeat(3 1fr);
+        grid-template-areas:
+            "logo tabs icons";
             
     }
     /* Logo */
